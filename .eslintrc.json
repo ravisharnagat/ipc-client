@@ -1,0 +1,25 @@
+{
+  "env": {
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jest/all"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": ["error", {"allow": ["warn", "error"]}],
+    "jest/expect-expect": "off",
+    "jest/prefer-expect-assertions": "off"
+  }
+}
