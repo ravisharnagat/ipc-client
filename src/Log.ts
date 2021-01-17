@@ -21,7 +21,7 @@ export interface LogData {
 }
 
 const ES_ENDPOINT =
-  'vpc-whetstone-v1-geelfttbaurulkxsezexuzb564.us-east-1.es.amazonaws.com'
+  'vpc-whetstone-alt-ia4pnjln3qqws4hy5pojyvc2hq.us-east-1.es.amazonaws.com'
 const REGION = 'us-east-1'
 
 const logStore: unknown[] = []
