@@ -16,6 +16,7 @@ export interface LogData {
   connectionId: string
   timestamp: Date
   customIndexName: string
+  indexName: string
   payload: Record<string, unknown>
   event: EVENT
 }

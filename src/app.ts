@@ -25,16 +25,17 @@ ipc.connectTo(WHETSTONE_SERVER, function() {
   ipc.of[WHETSTONE_SERVER].on('connect', function() {
     ipc.of[WHETSTONE_SERVER].emit('message', 'hello')
   })
-  ipc.of[WHETSTONE_SERVER].on('message', function(data: ServerPayload) {
-    switch (data.action) {
+  ipc.of[WHETSTONE_SERVER].on('message', function(data: string) {
+    const serverData: ServerPayload = JSON.parse(data)
+    switch (serverData.action) {
       case ACTION.START_LOGGING:
         Log.start()
         break
       case ACTION.SET_INDEX_NAME:
-        Log.setIndexName(data.payload.customIndexName)
+        Log.setIndexName(serverData.payload.indexName)
         break
       case ACTION.ADD_LOGS:
-        Log.add(data.payload)
+        Log.add(serverData.payload)
         break
       default:
     }
